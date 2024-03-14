@@ -4,8 +4,13 @@ const router = express.Router()
 const crypto = require('crypto')
 
 router.route('/').get((req,res) => {
-    console.log("get about request")
-    res.send("get about request")
+    if(req.query.personName==="Ajit")
+    {
+        res.send("Soshin is gentle person")
+    }
+    else{
+        res.send("get about request")
+        }
 })
 
 
